@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 	@RequestMapping("/")
-	public String index()
+	public String main()
 	{
-		return "redirect:login";
+		return "login";
 	}
 	@RequestMapping("/login")
 	public String login()
@@ -17,10 +17,10 @@ public class MainController {
 		return "login";
 	}
 	
-	@RequestMapping("/main")
-	public String  mainEntrance()
+	@RequestMapping("/index")
+	public String  index()
 	{
-		return "main/mainBoard";
+		return "index";
 	}
 	@RequestMapping("*.html")
 	public String clientError()
